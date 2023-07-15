@@ -44,14 +44,30 @@ header {
 /* branding */
 .branding {
     color: var(--text-color);
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 1px;
-    padding-right: 50px;
+    padding-right: 30px;
 }
-
 span {
     color: var(--main-color);
+}
+.hero-git{
+    display:block;
+    align-items:center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right:5px;
+}
+.hero-git i{
+    background: var(--escond-bg-color);
+    width: 20px;
+    transition: all 0.5s ease;
+}
+.hero-git i:hover{
+    cursor: pointer;
+    transform: scale(4);
 }
 
 /* nav-list  */
@@ -70,14 +86,14 @@ span {
     color: var(--main-color);
 }
 
-#githublink {
-    font-size: 35px;
-    color: var(--text-color);
-    z-index: 1000;
-    cursor: pointer;
-    margin-left: 25px;
-    display: none;
-}
+/* #githublink { */
+    /* font-size: 35px; */
+    /* color: var(--text-color); */
+    /* z-index: 1000; */
+    /* cursor: pointer; */
+    /* margin-left: 25px; */
+    /* display: none; */
+/* } */
 
 .nav-bar {
     display: flex;
