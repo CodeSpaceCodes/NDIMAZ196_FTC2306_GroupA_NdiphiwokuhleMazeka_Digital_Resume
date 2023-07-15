@@ -58,7 +58,6 @@ span {
 .navlist ul li {
     display: inline;
 }
-
 .navlist a {
     color: var(--second-color);
     font-size: 15px;
@@ -310,6 +309,7 @@ section {
         "#languages #languages #languages";
     gap: 2rem;
     margin-top: 3rem;
+    
 }
 #social {
     grid-area: "#social";
@@ -327,10 +327,9 @@ section {
 .ski-content-container h3 {
     text-align: center;
 }
-.lingos {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.lingos-list ul li{
+    display: inline;
+    padding: 12px;
 }
 
 /* portfolio */
@@ -466,4 +465,33 @@ section {
     /* font-size: minmax(10px 15px); */
     /* border: none; */
     /* outline: none; */
+}
+
+/* responsive ness */
+/* tablets */
+@media (max-width: 1024) {
+ .ski-content-container {
+    /* display: grid; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "#social" 
+        "#technical" 
+        "#mental"
+        "#languages";
+    gap: 2rem;
+    margin-top: 3rem;
+}
+#social {
+    grid-area: "#social";
+}
+#technical {
+    grid-area: "#technical";
+}
+#mental {
+    grid-area: "#mental";
+}
+#languages {
+    grid-area: "#languages";
+}
 }
