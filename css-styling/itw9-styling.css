@@ -20,13 +20,23 @@
 }
 
 /* body */
-body {
+body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+/* body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+} */
 
 /* header */
 header {
+    grid-area: "header";
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,7 +50,6 @@ header {
     border-bottom: 1px solid transparent;
     transition: all 0.5s ease;
 }
-
 /* branding */
 .branding {
     color: var(--text-color);
@@ -52,6 +61,7 @@ header {
 span {
     color: var(--main-color);
 }
+/* github linked icon */
 .hero-git{
     display:block;
     align-items:center;
@@ -69,7 +79,6 @@ span {
     cursor: pointer;
     transform: scale(4);
 }
-
 /* nav-list  */
 .navlist ul li {
     display: inline;
@@ -81,11 +90,9 @@ span {
     margin: 0 25px;
     transition: all .55s ease;
 }
-
 .navlist a:hover {
     color: var(--main-color);
 }
-
 /* #githublink { */
     /* font-size: 35px; */
     /* color: var(--text-color); */
@@ -94,16 +101,21 @@ span {
     /* margin-left: 25px; */
     /* display: none; */
 /* } */
-
 .nav-bar {
     display: flex;
 }
 
-/* hero section */
+/* generally for section */
 section {
     padding: 5% 10% 4%;
 }
 
+/* main styling begins */
+main{
+    grid-area: "main";
+}
+
+/* hero page */
 .hero {
     position: relative;
     height: 100vh;
@@ -115,11 +127,10 @@ section {
     align-items: center;
     justify-content: flex-start;
 }
-
-.slide {
+/* hero text modification */
+.hero-text {
     margin-bottom: 20px;
 }
-
 .first {
     display: inline-block;
     margin-right: 50px;
@@ -131,14 +142,12 @@ section {
     background: var(--main-color);
     color: var(--text-color);
 }
-
 .second {
     display: inline-block;
     color: var(--second-color);
     font-size: 20px;
     font-weight: 500;
 }
-
 .hero-text h1 {
     font-size: var(--big-font);
     font-weight: 700;
@@ -146,7 +155,6 @@ section {
     line-height: 2;
     margin: 0 0 8px;
 }
-
 .hero-text h3 {
     color: var(--text-color);
     margin: 0 0 35px;
@@ -154,7 +162,6 @@ section {
     font-weight: 700;
     line-height: 2;
 }
-
 .hero-text p {
     color: var(--second-color);
     font-size: var(--p-font);
@@ -318,35 +325,35 @@ section {
 
 .ski-content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-        "#social #technical #mental"
-        "#languages #languages #languages";
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    /* grid-template-rows: auto; */
+    /* grid-template-areas: */
+        /* "#Personal-skills languages"; */
     gap: 2rem;
     margin-top: 3rem;
     
 }
-#social {
+/* #social {
     grid-area: "#social";
-}
-#technical {
+} */
+/* #technical {
     grid-area: "#technical";
-}
-#mental {
+} */
+/* #mental {
     grid-area: "#mental";
-}
-#languages {
+} */
+/* #languages {
     grid-area: "#languages";
-    grid-column: 1 / 4;
-}
+    grid-column: 1 / 4; 
+}*/
+
 .ski-content-container h3 {
     text-align: center;
-}
-.lingos-list ul li{
+ } 
+/* .lingos-list ul li{
     display: inline;
     padding: 12px;
-}
+}  */
 
 /* portfolio */
 .port-content{
@@ -413,6 +420,10 @@ section {
     height: 100%;
 }
 
+/* footer styling begis here */
+footer{
+    grid-area: "footer";
+}
 /* contacts */
 .contacts{
     background: var(--second-bg-color);
